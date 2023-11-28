@@ -85,3 +85,29 @@ console.log(anyDeposits)// Returns a boolean value and check if any element in t
 
 const checkEvery = euros.every((euro) => euro <= 3000)
 console.log(checkEvery) // Returns a boolean value and checks if each and every element in the array satisfies the condition 
+
+// FLAT AND FLAT MAP
+// What these methods do is that it will flaten the array 
+
+//EXAMPLE
+
+const arrToFlaten =  [[1,2,3], [4,5,6], [7,8,9]]
+
+const flatenedArr = arrToFlaten.flat()
+console.log(flatenedArr) // Returns a flatened array
+
+
+const arrToDeepFlaten =  [[1,[2,3]], [[4,5],6], [7,8,9]]
+
+const deepFlatenedArr = arrToDeepFlaten.flat(2) // The number that is given as an argument is called the depth to which we want to flaten
+
+console.log(deepFlatenedArr)
+
+const overallBalance = accounts.map((acc) => acc.movements).flat().reduce((acc, mov) => acc + mov, 0)
+console.log(overallBalance)
+
+// FLATMAP *** It simple is like a map method but at the end it flatens the array
+
+
+const overallBalanceFlatmap = accounts.flatMap((acc) => acc.movements).reduce((acc, mov) => acc + mov, 0)
+console.log(overallBalanceFlatmap)
