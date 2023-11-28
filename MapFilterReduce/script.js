@@ -61,3 +61,27 @@ console.log(maxValue)
 // Minimum value in the array
 const minValue = euros.reduce((acc, euro, euros) => (acc < euro) ? acc : euro , euros[0])
 console.log(minValue)
+
+// FIND METHOD of arrays
+
+const bankAccounts = [...accounts]
+
+// FIND METHOD returns the first element of the array the meets the condition
+
+const bankAccount = bankAccounts.find((account) => account.owner === "Jessica Davis")
+
+console.log(bankAccount)
+
+// INCLUDES METHOD
+
+console.log(euros.includes(3000)) // checks for equality returns a boolean value
+
+// SOME METHOD
+
+const anyDeposits = euros.some((mov) => mov > 0)
+console.log(anyDeposits)// Returns a boolean value and check if any element in the array satisfies the condition 
+
+// EVERY METHOD
+
+const checkEvery = euros.every((euro) => euro <= 3000)
+console.log(checkEvery) // Returns a boolean value and checks if each and every element in the array satisfies the condition 
