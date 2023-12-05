@@ -134,7 +134,6 @@ class PersonCl {
   
   const Zain = Object.create(PersonProto);
   console.log(Zain);
-  Zain.name = 'Steven';
   Zain.birthYear = 2002;
   Zain.calcAge();
   
