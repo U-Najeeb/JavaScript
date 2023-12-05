@@ -80,7 +80,7 @@ class PersonCl {
   
   const Umair = new PersonCl('Umair Najeeb', 1996);
   console.log(Umair);
-  jessica.calcAge();
+  Umair.calcAge();
   console.log(Umair.age);
   
   console.log(Umair.__proto__ === PersonCl.prototype);
@@ -88,7 +88,7 @@ class PersonCl {
   // PersonCl.prototype.greet = function () {
   //   console.log(`Hey ${this.firstName}`);
   // };
-  jessica.greet();
+  Umair.greet();
   
   // 1. Classes are NOT hoisted
   // 2. Classes are first-class citizens
@@ -101,7 +101,7 @@ class PersonCl {
   ///////////////////////////////////////
   // Setters and Getters
   const account = {
-    owner: 'Jonas',
+    owner: 'Umair',
     movements: [200, 530, 120, 300],
   
     get latest() {
